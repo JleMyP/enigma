@@ -66,8 +66,8 @@
             // comboBox_reflectors
             // 
             this.comboBox_reflectors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_reflectors.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox_reflectors, "comboBox_reflectors");
+            this.comboBox_reflectors.FormattingEnabled = true;
             this.comboBox_reflectors.Name = "comboBox_reflectors";
             this.comboBox_reflectors.SelectedIndexChanged += new System.EventHandler(this.comboBox_reflectors_SelectedIndexChanged);
             // 
@@ -136,8 +136,8 @@
             // comboBox_machines
             // 
             this.comboBox_machines.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_machines.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox_machines, "comboBox_machines");
+            this.comboBox_machines.FormattingEnabled = true;
             this.comboBox_machines.Name = "comboBox_machines";
             this.comboBox_machines.SelectedIndexChanged += new System.EventHandler(this.comboBox_machines_SelectedIndexChanged);
             // 

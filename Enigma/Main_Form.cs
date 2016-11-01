@@ -1,12 +1,11 @@
 ﻿/*
     Мартынов Тимофей, кт-202
-    14.05.2016 
+    9.07.2016 
     timtim96@bk.ru
 */
 
 
 using System;
-using System.IO;
 using System.Xml;
 using System.Text;
 using System.Drawing;
@@ -17,7 +16,7 @@ using System.Windows.Forms;
 
 
 namespace Enigma {
-    public partial class Main_Form :Form {
+    public partial class Main_Form: Form {
 
         Dictionary<string, Machine> machines = new Dictionary<string, Machine>();
 
@@ -174,9 +173,9 @@ namespace Enigma {
 
                 Label l = new Label();
                 l.AutoSize = true;
-                l.Font = new Font(l.Font.Name, 9, FontStyle.Bold);
+                l.Font = new Font("Times New Roman", 9, FontStyle.Bold);
                 l.Text = machine.cur_rotors[n].name;
-                l.Location = new Point(40 + n * 60 , 110);
+                l.Location = new Point(45 + n * 60 , 115);
                 l.BackColor = Color.Transparent;
                 l.ForeColor = Color.FromName("Info");
                 label_poses.Add(l);
@@ -212,28 +211,42 @@ namespace Enigma {
             machine.Back();
             for (int i = 0; i < machine.rotors_count; i++)
                 box_poses[i].SelectedItem = machine.cur_rotors[i].pos;
+            if (textBoxInput.TextLength != 0) machine.CodeSymbol(textBoxInput.Text.Last());
         }
 
 
-        public void show_help(string head, string body) {
+        public void show_path() {
+            if (form_view.Controls.Count == 0) form_view = new Form_view(machine);
+            form_view.drow();
+            if (checkBoxAuto.Checked) {
+                form_view.Show();
+                buttonShow.Text = "скрыть путь";
+            }
+            form_view.Location = new Point(Right + 20, Top);
+        }
+
+
+        public void show_help(string name) {
             if (form_help == null || form_help.Controls.Count == 0) form_help = new Form_help();
-            form_help.label_head.Text = head;
-            form_help.label_body.Text = body;
+            form_help.selectHelp(name);
             form_help.Show();
         }
 
 
         private void pictureBoxComm_Paint(object sender, PaintEventArgs e) {
             Graphics g = e.Graphics;
-            Font f = new Font(FontFamily.Families[0], key_size / 2, FontStyle.Regular);
+            Font f = new Font("Times New Roman", key_size / 2, FontStyle.Regular);
+            SolidBrush f_brush = new SolidBrush(Color.Black);
             int px = 0, py = 0;
+            float w;
             Color color;
             foreach (string[] s in keys) {
                 foreach (string c in s) {
                     if (colors[c[0] - 'A'].Name != "0") color = colors[c[0] - 'A'];
                     else color = Color.Gray;
+                    w = g.MeasureString(c, f).Width;
                     g.FillEllipse(new SolidBrush(color), new Rectangle(px, py, key_size, key_size));
-                    g.DrawString(c, f, new SolidBrush(Color.Black), px + key_size / 4, py + (key_size - f.Height) / 2);
+                    g.DrawString(c, f, f_brush, px + (key_size - w) / 2, py + (key_size - f.Height) / 2);
                     px += (int)(key_size * 1.25);
                 }
                 py += (int)(key_size * 1.25);
@@ -244,17 +257,19 @@ namespace Enigma {
 
         private void pictureBoxkeyboard_Paint(object sender, PaintEventArgs e) {
             Graphics g = e.Graphics;
-            Font f = new Font(FontFamily.Families[0], key_size / 2, FontStyle.Regular);
+            Font f = new Font("Times New Roman", key_size / 2, FontStyle.Regular);
             SolidBrush f_brush = new SolidBrush(Color.Black);
             SolidBrush sel_brush = new SolidBrush(Color.Yellow);
             SolidBrush brush = new SolidBrush(Color.LightGreen);
 
             int px = 0, py = 0;
+            float w;
             foreach (string[] s in keys) {
                 foreach (string c in s) {
                     SolidBrush b = (textBoxInput.TextLength > 0 && c[0] == textBoxInput.Text.Last()) ? sel_brush : brush;
                     g.FillEllipse(b, px, py, key_size, key_size);
-                    g.DrawString(c, f, f_brush, px + key_size / 4, py + (key_size - f.Height) / 2);
+                    w = g.MeasureString(c, f).Width;
+                    g.DrawString(c, f, f_brush, px + (key_size - w) / 2, py + (key_size - f.Height) / 2);
                     px += (int)(key_size * 1.25);
                 }
                 px -= (int)(key_size * 0.5) + (int)((s.Length - 1) * key_size * 1.25);
@@ -277,13 +292,17 @@ namespace Enigma {
 
         private void pictureBoxLight_Paint(object sender, PaintEventArgs e) {
             Graphics g = e.Graphics;
-            Font f = new Font(FontFamily.Families[0], key_size / 2, FontStyle.Regular);
+            Font f = new Font("Times New Roman", key_size / 2, FontStyle.Regular);
+            SolidBrush brush = new SolidBrush(Color.Black);
+
             int px = 0, py = 0;
+            float w;
             foreach (string[] s in keys) {
                 foreach (string c in s) {
-                    Color color = (machine.path != null && c[0] == machine.path.Last()) ? Color.Yellow : Color.Pink;
+                    Color color = (!string.IsNullOrEmpty(machine.path) && textBoxInput.TextLength > 0 && c[0] == machine.path.Last()) ? Color.Yellow : Color.Pink;
                     g.FillEllipse(new SolidBrush(color), new Rectangle(px, py, key_size, key_size));
-                    g.DrawString(c, f, new SolidBrush(Color.Black), px + key_size / 4, py + (key_size - f.Height) / 2);
+                    w = g.MeasureString(c, f).Width;
+                    g.DrawString(c, f, brush, px + (key_size - w) / 2, py + (key_size - f.Height) / 2);
                     px += (int)(key_size * 1.25);
                 }
                 py += (int)(key_size * 1.25);
@@ -337,13 +356,15 @@ namespace Enigma {
             textBoxInput.Text += symbol;
             Step();
             textBoxOutput.Text += machine.CodeSymbol(symbol[0]).ToString();
+            textBoxInput.SelectionStart = textBoxInput.TextLength;
+            textBoxOutput.SelectionStart = textBoxOutput.TextLength;
+            textBoxInput.ScrollToCaret();
+            textBoxOutput.ScrollToCaret();
 
-            if (form_view.Controls.Count == 0) form_view = new Form_view(machine);
-            form_view.drow();
+
             pictureBoxLight.Refresh();
             pictureBoxKeyboard.Refresh();
-            if (checkBoxAuto.Checked) form_view.Show();
-            form_view.Location = new Point(Right + 20, Top);
+            show_path();
         }
 
 
@@ -387,14 +408,20 @@ namespace Enigma {
                 }
                 textBoxInput.Text = textBoxInput.Text.Substring(0, textBoxInput.TextLength - 1);
                 textBoxOutput.Text = textBoxOutput.Text.Substring(0, textBoxOutput.TextLength - 1);
+                show_path();
             } else if ('A' <= e.KeyChar && e.KeyChar <= 'Z') {
                 Step();
                 textBoxInput.Text += e.KeyChar;
                 textBoxOutput.Text += machine.CodeSymbol(e.KeyChar).ToString();
+                show_path();
             } else if (e.KeyChar == ' ') {
                 textBoxInput.Text += ' ';
                 textBoxOutput.Text += ' ';
             }
+            textBoxInput.SelectionStart = textBoxInput.TextLength;
+            textBoxOutput.SelectionStart = textBoxOutput.TextLength;
+            textBoxInput.ScrollToCaret();
+            textBoxOutput.ScrollToCaret();
             e.Handled = true;
             pictureBoxLight.Refresh();
             pictureBoxKeyboard.Refresh();
@@ -425,12 +452,17 @@ namespace Enigma {
 
 
         private void buttonShow_Click(object sender, EventArgs e) {
-            if (form_view.Controls.Count == 0) form_view = new Form_view(machine);
-            if (machine.path == null) return;
-            form_view.drow();
-            pictureBoxLight.Refresh();
-            form_view.Show();
-            form_view.Location = new Point(Right + 20, Top);
+            if (form_view.IsHandleCreated) {
+                form_view.Dispose();
+                buttonShow.Text = "показать путь";
+            } else {
+                if (form_view.Controls.Count == 0) form_view = new Form_view(machine);
+                if (machine.path == null) return;
+                form_view.drow();
+                form_view.Show();
+                form_view.Location = new Point(Right + 20, Top);
+                buttonShow.Text = "скрыть путь";
+            }
         }
 
 
@@ -497,27 +529,27 @@ namespace Enigma {
 
 
         private void button_help_machine_Click(object sender, EventArgs e) {
-            show_help(machine.name, "че-то про экземпляр");
+            show_help("Intro");
         }
         
         private void button_help_reflector_Click(object sender, EventArgs e) {
-            show_help("Рефлектор", "че-то про рефлектор");
+            show_help("Рефлектор");
         }
         
         private void button_help_light_Click(object sender, EventArgs e) {
-            show_help("Световая панель", "че-то про панель");
+            show_help("Световая панель");
         }
 
         private void button_help_keyboard_Click(object sender, EventArgs e) {
-            show_help("Клавиатура", "че-то про клавиатуру");
+            show_help("Клавиатура");
         }
 
         private void button_help_comm_Click(object sender, EventArgs e) {
-            show_help("Коммутационная панель", "че-то про панель");
+            show_help("Коммутационная панель");
         }
 
         private void button_help_rotors_Click(object sender, EventArgs e) {
-            show_help("Роторы", "че-то про роторы");
+            show_help("Роторы");
         }
     }
 }

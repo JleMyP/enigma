@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="comboBox_reflectors.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt</value>
+  </data>
   <data name="comboBox_reflectors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 40</value>
+    <value>184, 43</value>
   </data>
   <data name="comboBox_reflectors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 21</value>
+    <value>105, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="comboBox_reflectors.TabIndex" type="System.Int32, mscorlib">
@@ -141,7 +144,7 @@
     <value>13</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 205</value>
+    <value>15, 221</value>
   </data>
   <data name="textBoxOutput.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -151,7 +154,7 @@
     <value>Both</value>
   </data>
   <data name="textBoxOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 35</value>
+    <value>250, 37</value>
   </data>
   <data name="textBoxOutput.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -168,14 +171,17 @@
   <data name="&gt;&gt;textBoxOutput.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="button_clear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt</value>
+  </data>
   <data name="button_clear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_clear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 177</value>
+    <value>280, 180</value>
   </data>
   <data name="button_clear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+    <value>75, 22</value>
   </data>
   <data name="button_clear.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -199,16 +205,16 @@
     <value>True</value>
   </data>
   <data name="checkBox_panel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="checkBox_panel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="checkBox_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 90</value>
+    <value>306, 95</value>
   </data>
   <data name="checkBox_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 17</value>
+    <value>82, 20</value>
   </data>
   <data name="checkBox_panel.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -229,7 +235,7 @@
     <value>9</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 162</value>
+    <value>15, 174</value>
   </data>
   <data name="textBoxInput.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -238,7 +244,7 @@
     <value>Both</value>
   </data>
   <data name="textBoxInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 35</value>
+    <value>250, 37</value>
   </data>
   <data name="textBoxInput.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -255,14 +261,17 @@
   <data name="&gt;&gt;textBoxInput.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="buttonShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt</value>
+  </data>
   <data name="buttonShow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 70</value>
+    <value>184, 75</value>
   </data>
   <data name="buttonShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 23</value>
+    <value>105, 25</value>
   </data>
   <data name="buttonShow.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -286,16 +295,16 @@
     <value>True</value>
   </data>
   <data name="checkBoxAuto.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Times New Roman, 11.25pt, style=Bold</value>
   </data>
   <data name="checkBoxAuto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="checkBoxAuto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 67</value>
+    <value>306, 72</value>
   </data>
   <data name="checkBoxAuto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
+    <value>58, 21</value>
   </data>
   <data name="checkBoxAuto.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -319,16 +328,16 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Times New Roman, 9.75pt, style=Bold</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 140</value>
+    <value>55, 151</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
+    <value>71, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -352,16 +361,16 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Times New Roman, 9.75pt, style=Bold</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 275</value>
+    <value>55, 296</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 13</value>
+    <value>146, 15</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -381,11 +390,14 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="comboBox_machines.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt</value>
+  </data>
   <data name="comboBox_machines.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 11</value>
+    <value>184, 12</value>
   </data>
   <data name="comboBox_machines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 21</value>
+    <value>105, 23</value>
   </data>
   <data name="comboBox_machines.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -402,14 +414,17 @@
   <data name="&gt;&gt;comboBox_machines.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="button_save.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt</value>
+  </data>
   <data name="button_save.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 210</value>
+    <value>280, 226</value>
   </data>
   <data name="button_save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>75, 25</value>
   </data>
   <data name="button_save.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -430,7 +445,7 @@
     <value>4</value>
   </data>
   <data name="button_help_light.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 7pt</value>
+    <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="button_help_light.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -439,7 +454,7 @@
     <value>30, 5</value>
   </data>
   <data name="button_help_light.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="button_help_light.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -460,22 +475,22 @@
     <value>9</value>
   </data>
   <data name="button_help_machine.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 7pt</value>
+    <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="button_help_machine.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_help_machine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 10</value>
+    <value>306, 11</value>
   </data>
   <data name="button_help_machine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>101, 27</value>
   </data>
   <data name="button_help_machine.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
   </data>
   <data name="button_help_machine.Text" xml:space="preserve">
-    <value>?</value>
+    <value>Enigma-педия</value>
   </data>
   <data name="&gt;&gt;button_help_machine.Name" xml:space="preserve">
     <value>button_help_machine</value>
@@ -490,16 +505,16 @@
     <value>3</value>
   </data>
   <data name="button_help_keyboard.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 7pt</value>
+    <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="button_help_keyboard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_help_keyboard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 140</value>
+    <value>30, 151</value>
   </data>
   <data name="button_help_keyboard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="button_help_keyboard.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -520,16 +535,16 @@
     <value>3</value>
   </data>
   <data name="button_help_comm.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 7pt</value>
+    <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="button_help_comm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_help_comm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 275</value>
+    <value>30, 296</value>
   </data>
   <data name="button_help_comm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="button_help_comm.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -556,10 +571,10 @@
     <value>NoControl</value>
   </data>
   <data name="button_help_reflector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 41</value>
+    <value>306, 44</value>
   </data>
   <data name="button_help_reflector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="button_help_reflector.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
@@ -583,10 +598,10 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBoxComm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 295</value>
+    <value>25, 318</value>
   </data>
   <data name="pictureBoxComm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 100</value>
+    <value>350, 108</value>
   </data>
   <data name="pictureBoxComm.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -607,10 +622,10 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBoxLight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 25</value>
+    <value>25, 27</value>
   </data>
   <data name="pictureBoxLight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 100</value>
+    <value>350, 108</value>
   </data>
   <data name="pictureBoxLight.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -631,10 +646,10 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBoxKeyboard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 160</value>
+    <value>25, 172</value>
   </data>
   <data name="pictureBoxKeyboard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 100</value>
+    <value>350, 108</value>
   </data>
   <data name="pictureBoxKeyboard.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -5321,10 +5336,10 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 10</value>
+    <value>10, 11</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 85</value>
+    <value>155, 92</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -5351,7 +5366,7 @@
     <value>3, 3</value>
   </data>
   <data name="bolt1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="bolt1.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -5375,10 +5390,10 @@
     <value>NoControl</value>
   </data>
   <data name="bolt3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 382</value>
+    <value>3, 411</value>
   </data>
   <data name="bolt3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="bolt3.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -5405,7 +5420,7 @@
     <value>377, 3</value>
   </data>
   <data name="bolt2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="bolt2.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -5429,10 +5444,10 @@
     <value>NoControl</value>
   </data>
   <data name="bolt4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 382</value>
+    <value>377, 411</value>
   </data>
   <data name="bolt4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="bolt4.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
@@ -5465,10 +5480,10 @@
     <value>0</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 255</value>
+    <value>10, 275</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 405</value>
+    <value>400, 436</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -5489,7 +5504,7 @@
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Times New Roman, 9.75pt, style=Bold</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -5498,7 +5513,7 @@
     <value>55, 5</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 13</value>
+    <value>101, 15</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -5519,16 +5534,16 @@
     <value>0</value>
   </data>
   <data name="button_help_rotors.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 7pt</value>
+    <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="button_help_rotors.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_help_rotors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 136</value>
+    <value>15, 146</value>
   </data>
   <data name="button_help_rotors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 22</value>
   </data>
   <data name="button_help_rotors.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -5555,13 +5570,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 14</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>434, 677</value>
+    <value>434, 729</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8.25pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Enigma</value>

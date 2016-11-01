@@ -102,7 +102,6 @@ namespace Enigma {
 
 
         public void Back(int i = 0) {
-            path = path.Substring(0, path.Length - 1);
             foreach (char s in cur_rotors[i].step) {
                 if (cur_rotors[i].pos == CharOp(s, -1) && i > 0) {
                     Back(i - 1);
